@@ -33,6 +33,9 @@ data_load_state=st.text("loading Data ...")
 data=load_data(10000)
 data_load_state.text("Loading data done")
 
+st.subheader("Raw Data")
+st.write(data)
+
 number = st.slider("Pick a number", 0, 100)
 
 color = st.color_picker("Pick a color")
