@@ -15,7 +15,7 @@ Hello *world!*
 """)
 
 
-st.bar_chart(df, x="category", y="sales")
+#st.bar_chart(df, x="category", y="sales")
 
 
 number = st.slider("Pick a number", 0, 100)
