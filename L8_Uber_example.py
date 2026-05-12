@@ -9,10 +9,6 @@ import datetime
 
 st.title("Uber Pickups in New York")
 
-st.write("""
-# My first app
-Hello *world!*
-""")
 
 
 #st.bar_chart(df, x="category", y="sales")
@@ -54,7 +50,7 @@ filtered_data=data[data[DATE_COLUMN].dt.hour==hour_to_filter]
 col2.subheader(f"Map of all Pickups at {hour_to_filter}:00")
 col2.map(filtered_data)
 
-number = st.slider("Pick a number", 0, 100)
 
-color = st.color_picker("Pick a color")
+
+color = col1.color_picker("Pick a color")
 
