@@ -17,6 +17,12 @@ Hello *world!*
 
 #st.bar_chart(df, x="category", y="sales")
 
+DATE_COLUMN = 'date/time'
+DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
+         'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
+
+
+
 
 number = st.slider("Pick a number", 0, 100)
 
