@@ -29,6 +29,10 @@ def load_data(nrows):
         data[DATE_COLUMN]=pd.to_datetime(data[DATE_COLUMN])
         return data
 
+data_load_state=st.text("loading Data ...")
+data=load_data(10000)
+data_load_state=st.text("Loading data done")
+
 number = st.slider("Pick a number", 0, 100)
 
 color = st.color_picker("Pick a color")
