@@ -36,6 +36,13 @@ data_load_state.text("Loading data done")
 st.subheader("Raw Data")
 st.write(data)
 
+
+st.subheader("Num Pickups per hour")
+hist_values=np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
+st.bar_chart(hist_values)
+
+
+
 number = st.slider("Pick a number", 0, 100)
 
 color = st.color_picker("Pick a color")
