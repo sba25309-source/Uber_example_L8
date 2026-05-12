@@ -16,7 +16,7 @@ Hello *world!*
 
 
 #st.bar_chart(df, x="category", y="sales")
-
+col1, col2 = st.columns([3, 1])
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
          'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
@@ -33,13 +33,20 @@ data_load_state=st.text("loading Data ...")
 data=load_data(10000)
 data_load_state.text("Loading data done")
 
-st.subheader("Raw Data")
-st.write(data)
+col1.subheader("Raw Data")
+col1.write(data)
 
 
-st.subheader("Num Pickups per hour")
+col1.subheader("Num Pickups per hour")
 hist_values=np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
-st.bar_chart(hist_values)
+col1.bar_chart(hist_values)
+
+
+
+
+col2.subheader("map of pickups")
+col2.map(data)S
+
 
 
 
