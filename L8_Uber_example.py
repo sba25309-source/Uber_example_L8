@@ -34,14 +34,14 @@ if col1.checkbox("show raw data"):
     col1.write(data)
 
 
-col1.subheader("Num Pickups per hour")
+col1.title("Num Pickups per hour")
 hist_values=np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
 col1.bar_chart(hist_values)
 
 
 
 
-col2.subheader("map of pickups")
+col2.title("map of pickups")
 col2.map(data)
 
 
