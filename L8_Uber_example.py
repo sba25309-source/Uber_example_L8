@@ -50,12 +50,10 @@ col2.map(data)
 
 hour_to_filter=col2.slider("hour", 0,23,17)
 filtered_data=data[data[DATE_COLUMN].dt.hour==hour_to_filter]
-
+st.subheader(f"Map of all Pickups at {hour_to_filter}:00")
+st.map(filtered_data)
 
 number = st.slider("Pick a number", 0, 100)
 
 color = st.color_picker("Pick a color")
 
-
-d = st.date_input("When's your birthday", datetime.date(2019, 7, 6))
-st.write("Your birthday is:", d)
