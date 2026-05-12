@@ -45,9 +45,10 @@ col1.bar_chart(hist_values)
 
 
 col2.subheader("map of pickups")
-col2.map(data)S
+col2.map(data)
 
 
+hour_to_filter=st.slider()
 
 
 number = st.slider("Pick a number", 0, 100)
