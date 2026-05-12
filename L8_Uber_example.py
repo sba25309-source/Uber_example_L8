@@ -50,8 +50,8 @@ col2.map(data)
 
 hour_to_filter=col2.slider("hour", 0,23,17)
 filtered_data=data[data[DATE_COLUMN].dt.hour==hour_to_filter]
-st.subheader(f"Map of all Pickups at {hour_to_filter}:00")
-st.map(filtered_data)
+col2.subheader(f"Map of all Pickups at {hour_to_filter}:00")
+col2.map(filtered_data)
 
 number = st.slider("Pick a number", 0, 100)
 
