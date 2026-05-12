@@ -33,8 +33,9 @@ data_load_state=st.text("loading Data ...")
 data=load_data(10000)
 data_load_state.text("Loading data done")
 
-col1.subheader("Raw Data")
-col1.write(data)
+if col1.checkbox("show raw data"):
+    col1.subheader("Raw Data")
+    col1.write(data)
 
 
 col1.subheader("Num Pickups per hour")
